@@ -78,6 +78,7 @@ function res() {
     }
     console.log('desc', 'function res'); //不会执行
 }
+```
 
 # forEach
 
