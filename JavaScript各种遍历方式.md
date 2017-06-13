@@ -118,14 +118,15 @@ var result = [];
 angular.forEach(demoArr, function(val, index) {
     this.push(val);
 }, result);
-do/while
 ```
+# do/while
 
 函数具体的实现方式如下，不过有一点值得注意的是，当使用continue时，如果你将i++放在了后面，那么i++的值将一直不会改变，最后陷入死循环。因此使用do/while一定要小心谨慎一点。
 
-不建议使用do/while的方式来遍历数组
-// 直接使用while
+不建议使用```js do/while ```的方式来遍历数组
 ```js
+// 直接使用while
+
 (function() {
     var i = 0,
         len = demoArr.length;
