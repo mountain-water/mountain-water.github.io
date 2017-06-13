@@ -1,6 +1,6 @@
 ## Welcome to GitHub Pages
 
-### ES6 import和export语法
+## ES6 import和export语法
 https://mountain-water.github.io/Es6_Export_Import_Syntax
 
 
