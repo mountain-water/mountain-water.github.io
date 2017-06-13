@@ -1,4 +1,4 @@
-## Export syntax
+# Export syntax
 ```markdown
 // default exports
 export default 42;
@@ -40,9 +40,9 @@ export {foo as default, bar} from "foo";
 export {default} from "foo";
 export {default as foo} from "foo";
 
+# Markdown
+# import syntax
 ```markdown
-## import syntax
-
 // default imports
 import foo from "foo";
 import {default as foo} from "foo";
