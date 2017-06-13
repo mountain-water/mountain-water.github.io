@@ -40,6 +40,7 @@ export {foo as default, bar} from "foo";
 export {default} from "foo";
 export {default as foo} from "foo";
 
+```markdown
 ## import syntax
 
 // default imports
