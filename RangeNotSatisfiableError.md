@@ -1,5 +1,5 @@
 
-# 使用```js <video> ``` 遇到异常RangeNotSatisfiableError
+# 使用```<video>``` 遇到异常RangeNotSatisfiableError
 It's a valid request. It's also quite common when the client is requesting media or resuming a download.
 
 A client will often test to see if the server handles ranged requests other than just looking for an Accept-Ranges response. Chrome always sends a Range: bytes=0- with its first GET request for a video, so it's something you can't dismiss.
