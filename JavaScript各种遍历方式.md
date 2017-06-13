@@ -99,8 +99,8 @@ demoArr.forEach(function(val, index) {
 ```
 具体有以下需要注意的地方
 
-回调函数中有2个参数，分别表示值和索引，这一点与jQuery中的$.each相反
-forEach无法遍历对象
+回调函数中有2个参数，分别表示值和索引，这一点与jQuery中的 ``` $.each ```相反
+`` forEach ``` 法遍历对象
 forEach无法在IE中使用，firefox和chrome实现了该方法
 forEach无法使用break，continue跳出循环，使用return时，效果和在for循环中使用continue一致
 最重要的一点，可以添加第二参数，为一个数组，而且回调函数中的this会指向这个数组。而如果没有第二参数，则this会指向window。
@@ -123,7 +123,7 @@ angular.forEach(demoArr, function(val, index) {
 
 函数具体的实现方式如下，不过有一点值得注意的是，当使用continue时，如果你将i++放在了后面，那么i++的值将一直不会改变，最后陷入死循环。因此使用do/while一定要小心谨慎一点。
 
-不建议使用```js do/while ```的方式来遍历数组
+不建议使用``` do/while ```的方式来遍历数组
 ```js
 // 直接使用while
 
@@ -196,7 +196,7 @@ $.each(this, function(e, ele) {
 // 2 s
 // 4 3
 ```
-为什么length 和 [[PrimitiveValue]]没有遍历出来？突然灵光一动，在《javascript高级编程》中找到了答案，大概意思就是javascript的内部属性中，将对象数据属性中的Enumerable设置为了false
+为什么length 和 [[PrimitiveValue]]没有遍历出来？突然灵光一动，在《javascript高级编程》中找到了答案，大概意思就是javascript的内部属性中，将对象数据属性中的 ``` Enumerable ``` 设置为了 ``` false ```
 // 查看length的内部属性
 ```js
 console.log(Object.getOwnPropertyDescriptor(this, 'length'));
@@ -240,7 +240,7 @@ for(var item in domList) {
 var res = [].slice.call(domList);
 for(var item in res) {}
 ```
-类似这样的对象还有函数的属性arguments对象，当然字符串也是可以遍历的，但是因为字符串其他属性的enumerable被设置成了false，因此遍历出来的结果跟数组是一样的，也就不用担心这个问题了.
+类似这样的对象还有函数的属性arguments对象，当然字符串也是可以遍历的，但是因为字符串其他属性的 ``` enumerable ``` 被设置成了 ``` false ```，因此遍历出来的结果跟数组是一样的，也就不用担心这个问题了.
 
 小补充:三种函数自执行的方式 
 ```js
