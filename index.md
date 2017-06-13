@@ -1,7 +1,7 @@
 ## Welcome to GitHub Pages
 
 # ES6 import和export语法
-https://mountain-water.github.io/Es6_Export_Import_Syntax.md
+https://mountain-water.github.io/Es6_Export_Import_Syntax
 
 
 https://github.com/mountain-water/mountain-water.github.io/edit/master/index.md
