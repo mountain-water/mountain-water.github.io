@@ -1,5 +1,4 @@
 # Export syntax
-#
 ```js
 // default exports
 export default 42;
@@ -42,8 +41,7 @@ export {default} from "foo";
 export {default as foo} from "foo";
 ```
 
-#import syntax
-#
+# import syntax
 ```js
 // default imports
 import foo from "foo";
