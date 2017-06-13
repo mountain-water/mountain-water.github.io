@@ -78,7 +78,10 @@ function res() {
     }
     console.log('desc', 'function res'); //不会执行
 }
-forEach
+
+# forEach
+
+```js
 demoArr.forEach(function(arg) {})
 ```
 
