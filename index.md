@@ -1,5 +1,11 @@
 ## Welcome to GitHub Pages
 
+# ES6 import和export语法
+https://mountain-water.github.io/Es6_Export_Import_Syntax.md
+
+
+https://github.com/mountain-water/mountain-water.github.io/edit/master/index.md
+
 You can use the [editor on GitHub](https://github.com/mountain-water/mountain-water.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
