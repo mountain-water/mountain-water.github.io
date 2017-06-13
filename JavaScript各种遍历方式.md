@@ -33,8 +33,10 @@ var demoObj = {
 
 for循环中的i在循环结束之后任然存在与作用域中，为了避免影响作用域中的其他变量，使用函数自执行的方式将其隔离起来()();
 避免使用for(var i=0; i<demo1Arr.length; i++){} 的方式，这样的数组长度每次都被计算，效率低于上面的方式。也可以将变量声明放在for的前面来执行，提高阅读性
+```js
 var i = 0, len = demo1Arr.length;
 for(; i<len; i++) {};
+```
 跳出循环的方式有如下几种
 return 函数执行被终止
 break 循环被终止
@@ -99,17 +101,22 @@ forEach无法在IE中使用，firefox和chrome实现了该方法
 forEach无法使用break，continue跳出循环，使用return时，效果和在for循环中使用continue一致
 最重要的一点，可以添加第二参数，为一个数组，而且回调函数中的this会指向这个数组。而如果没有第二参数，则this会指向window。
 
+```js
 var newArr = [];
 demoArr.forEach(function(val, index) {
     this.push(val); // 这里的this指向newArr
 }, newArr)
+```
 虽然在原生中forEach循环的局限性很多，但是了解他的必要性在于，很多第三方库会扩展他的方法，使其能够应用在很多地方，比如angular的工具方法中，也有forEach方法，其使用与原生的基本没有差别，只是没有了局限性，可以在IE下使用，也可以遍历对象
 
+```js
 var result = [];
 angular.forEach(demoArr, function(val, index) {
     this.push(val);
 }, result);
 do/while
+```
+
 函数具体的实现方式如下，不过有一点值得注意的是，当使用continue时，如果你将i++放在了后面，那么i++的值将一直不会改变，最后陷入死循环。因此使用do/while一定要小心谨慎一点。
 
 不建议使用do/while的方式来遍历数组
@@ -171,7 +178,8 @@ console.log(this);
 
 console.log(this == ele);
 // true
-```js
+```
+
 关于上面的this值，遍历一下
 ```js
 $.each(this, function(e, ele) {
@@ -185,10 +193,14 @@ $.each(this, function(e, ele) {
 ```
 为什么length 和 [[PrimitiveValue]]没有遍历出来？突然灵光一动，在《javascript高级编程》中找到了答案，大概意思就是javascript的内部属性中，将对象数据属性中的Enumerable设置为了false
 // 查看length的内部属性
+```js
 console.log(Object.getOwnPropertyDescriptor(this, 'length'));
 // Object {value: 4, writable: false, enumerable: false, configurable: false}
+...
 $.each 中的 $(this) 与this有所不同，不过遍历结果却是一样，你可以在测试代码中打印出来看看
+```js
 $(selecter).each
+```
 专门用来遍历DOMList
 ```js
 $('.list li').each(function(i, ele) {
