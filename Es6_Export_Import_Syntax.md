@@ -1,4 +1,5 @@
 ## Export syntax
+```markdown
 // default exports
 export default 42;
 export default {};
