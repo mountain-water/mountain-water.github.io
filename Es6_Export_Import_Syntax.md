@@ -1,5 +1,5 @@
 # Export syntax
-```markdown
+```js
 // default exports
 export default 42;
 export default {};
@@ -39,8 +39,10 @@ export {foo as default} from "foo";
 export {foo as default, bar} from "foo";
 export {default} from "foo";
 export {default as foo} from "foo";
+...
 
-
+#import syntax
+...js
 // default imports
 import foo from "foo";
 import {default as foo} from "foo";
@@ -61,3 +63,4 @@ import foo, * as bar from "foo";
 
 // just import
 import "foo";
+...
